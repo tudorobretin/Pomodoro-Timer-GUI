@@ -14,7 +14,8 @@ reps = 0
 new_text=""
 timer = None
 
-# ---------------------------- TIMER RESET ------------------------------- # 
+# ---------------------------- TIMER RESET ------------------------------- #
+
 def reset():
     global new_text
     global reps
@@ -26,32 +27,30 @@ def reset():
     reps = 0
     new_text = ""
     check_label.config(text=new_text)
-# ---------------------------- TIMER MECHANISM ------------------------------- # 
+
+# ---------------------------- TIMER MECHANISM ------------------------------- #
+
 def start_timer():
     global new_text
     global reps
-    if reps == 0:
-        reps += 1
+    # if reps == 0:
+    reps += 1
 
-        if reps in [1,3,5,7]:
+    if reps in [1,3,5,7]:
             title_label.config(text="Work", fg=GREEN, font=(FONT_NAME, 35, "bold"))
             count_down(WORK_MIN * 60)
-        elif reps in [2, 4, 6]:
+    elif reps in [2, 4, 6]:
             new_text += "✓"
             check_label.config(text=new_text)
             title_label.config(text="Break", fg=PINK, font=(FONT_NAME, 35, "bold"))
             count_down(SHORT_BREAK_MIN * 60)
-        elif reps == 8:
+    elif reps == 8:
             new_text += "✓"
             check_label.config(text=new_text)
             title_label.config(text="Done",fg=RED , font=(FONT_NAME, 35, "bold"))
             count_down(LONG_BREAK_MIN * 60)
-        else:
+    else:
             title_label.config(text="Timer", fg=GREEN, font=(FONT_NAME, 35, "bold"))
-
-
-
-
 
 # ---------------------------- COUNTDOWN MECHANISM ------------------------------- # 
 
@@ -70,15 +69,12 @@ def count_down(count):
 
     canvas.itemconfig(timer_text, text=f"{count_min}:{count_sec}")
     if count > 0:
-        timer = window.after(1000, count_down, count - 1)
+        timer = window.after(1, count_down, count - 1)
     else:
         start_timer()
 
-
-
-
-
 # ---------------------------- UI SETUP ------------------------------- #
+
 window = tkinter.Tk()
 window.title("Pomodoro timer")
 window.minsize(width=500, height=500)
