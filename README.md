@@ -15,7 +15,7 @@ Features:
 - Timer count formatted to look and behave like a usual clock (4:09 instead of 4:9)
 - Dynamic text that displays current status (work, break, end)
 
-![](https://github.com/tudorobretin/Snake-Game/blob/readme/Snake.gif)
+![](https://github.com/tudorobretin/Pomodoro-Timer-GUI/blob/master/Pomodoro.gif)
 
 
         
