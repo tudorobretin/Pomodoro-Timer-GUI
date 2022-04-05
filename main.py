@@ -13,7 +13,7 @@ LONG_BREAK_MIN = 20
 reps = 0
 new_text=""
 timer = None
-
+speed = 0
 # ---------------------------- TIMER RESET ------------------------------- #
 
 def reset():
@@ -55,7 +55,7 @@ def start_timer():
 # ---------------------------- COUNTDOWN MECHANISM ------------------------------- # 
 
 def count_down(count):
-
+    global speed
     global reps
     global timer
 
@@ -68,8 +68,10 @@ def count_down(count):
         count_min = f"0{count_min}"
 
     canvas.itemconfig(timer_text, text=f"{count_min}:{count_sec}")
+
     if count > 0:
-        timer = window.after(1, count_down, count - 1)
+        timer = window.after(1000, count_down, count - 1)
+
     else:
         start_timer()
 

@@ -1,4 +1,4 @@
-# Snake Game
+# Pomodoro timer App
 A python pomodoro app that helps you focus on your work.
 
 ## Features and used concepts:
@@ -15,6 +15,7 @@ Features:
 - Timer count formatted to look and behave like a usual clock (4:09 instead of 4:9)
 - Dynamic text that displays current status (work, break, end)
 
+*gif sped up to showcase full functionality
 ![](https://github.com/tudorobretin/Pomodoro-Timer-GUI/blob/master/Pomodoro.gif)
 
 
