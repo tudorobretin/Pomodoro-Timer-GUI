@@ -16,6 +16,7 @@ Features:
 - Dynamic text that displays current status (work, break, end)
 
 *gif sped up to showcase full functionality
+
 ![](https://github.com/tudorobretin/Pomodoro-Timer-GUI/blob/master/Pomodoro.gif)
 
 
